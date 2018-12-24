@@ -6,7 +6,13 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Welcome to Poop', home: RandomWords());
+    return MaterialApp(
+        title: 'Welcome to Poop',
+        theme: new ThemeData(
+          primaryColor: Colors.red[400],
+          splashColor: Colors.blue[200]
+        ),
+        home: RandomWords());
   }
 }
 
@@ -57,9 +63,10 @@ class RandomWordsState extends State<RandomWords> {
                   title: const Text("Saved Suggestions"),
                 ),
                 body: new ListView(children: divided),
-              )
+              );
             }
-        ););
+        )
+    );
   }
 
   /*
